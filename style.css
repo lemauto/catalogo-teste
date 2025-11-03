@@ -1,0 +1,321 @@
+/* ===== ESTILO GERAL ===== */
+body{
+  color: rgb(0, 0, 0);
+  background-image:
+    linear-gradient(to right, rgba(135, 88, 2, 0.858), rgba(249, 196, 20, 0.922)),
+    url('img/esfera\ modas\ logo\ editado.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, 18%;
+  background-position: left top;
+  background-attachment: fixed, fixed;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 75px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+h2.galeria-titulo {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 55px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* ===== FORMULÁRIO DE CADASTRO ===== */
+.form-container {
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: 0 auto 25px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.form-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.form-container label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="file"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-container button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+.form-container button:hover {
+  background-color: #a06405;
+  transform: translateY(-2px);
+}
+
+/* ===== GALERIA ===== */
+#galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.card {
+  position: relative;
+  flex: 1 1 220px;
+  max-width: 220px;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img, .card video {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #ddd;
+  display: block;
+}
+
+.descricao {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  min-height: 45px;
+  flex-grow: 1;
+}
+
+.label {
+  background: #007bff;
+  color: #fff;
+  padding: 6px;
+  font-weight: 600;
+  text-align: center;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ===== BOTÕES DOS CARDS ===== */
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+.botoes button {
+  border: none;
+  background: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+.botoes button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* ===== CAIXA DE EDIÇÃO INLINE ===== */
+.editar-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #eef4ff;
+  border-top: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.editar-box input, .editar-box textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+.editar-box input:focus,
+.editar-box textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.editar-box button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+.editar-box button:first-child {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+.editar-box button:first-child:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: scale(1.05);
+}
+.editar-box button:last-child {
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+  color: white;
+}
+.editar-box button:last-child:hover {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  transform: scale(1.05);
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-content {
+  max-width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.modal-content img,
+.modal-content video {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 15px;
+  display: none;
+  background-color: #000;
+}
+
+/* ===== BOTÃO FECHAR ===== */
+.fechar {
+  position: absolute;
+  top: 8px; right: 8px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  width: 35px; height: 35px;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2000;
+  transition: background 0.3s, transform 0.2s;
+}
+.fechar:hover {
+  background: rgba(255,0,0,0.7);
+  transform: scale(1.1);
+}
+
+/* ===== SETAS ===== */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s;
+}
+.seta:hover { transform: translateY(-50%) scale(1.1); }
+
+.seta.esquerda { left: -50px; }
+.seta.direita { right: -50px; }
+
+.descricao-modal {
+  color: white;
+  margin-top: 15px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* ===== INDICADORES ===== */
+.indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+.indicador {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.indicador.ativo {
+  background-color: #28a745;
+  transform: scale(1.2);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+  .card { flex: 1 1 150px; max-width: 150px; }
+  .card img, .card video { max-height: 150px; }
+  .seta { font-size: 30px; }
+  .fechar { width: 30px; height: 30px; font-size: 22px; top: 5px; right: 5px; }
+}
