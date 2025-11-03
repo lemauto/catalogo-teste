@@ -3,7 +3,7 @@ body{
   color: rgb(0, 0, 0);
   background-image:
     linear-gradient(to right, rgba(135, 88, 2, 0.858), rgba(249, 196, 20, 0.922)),
-    url('imgs/esfera\ modas\ logo\ editado.jpg');
+  url('img/esfera\ modas\ logo\ editado.jpg');
   background-repeat: no-repeat, no-repeat;
   background-size: cover, 18%;
   background-position: left top;
